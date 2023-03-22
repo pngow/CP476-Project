@@ -16,6 +16,9 @@
         
         // send to home page if connection was successful
         header('Location: home.html');
+
+        // set up database
+        include("populate_db.php");
     } catch (PDOException $e) {
         echo "Connection failed: " . $e->getMessage();
 
