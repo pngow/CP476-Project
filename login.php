@@ -24,6 +24,7 @@
             form {
                 width: 50%;
                 margin: auto;
+                margin-top:50px;
                 background-color: #e7e7e7;
                 padding: 15px;
             }
@@ -63,9 +64,12 @@
                 text-align: center;
                 font-size:16px;
                 background-color: white;
+                border-width: 1px;
+                border-color: grey;
             }
             input[type=submit]:hover {
-                background-color: #e9fce9;
+                color: white;
+                background-color: black;
             }
         </style>
     </head>

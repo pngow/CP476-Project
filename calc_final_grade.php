@@ -13,6 +13,25 @@
         <title>Final Grades</title>
         <!-- format different tags/aspects of the web page -->
         <style>
+            h1 {
+                text-align:center;
+                margin-left: 15px;
+            }
+
+            div {
+                width: 100%;
+                text-align: center;
+                display: inline-block;
+            }
+
+            button {
+                margin-bottom: 25px;
+                width: 20%;
+                padding: 10px 24px;
+                text-align: center;
+                font-size:16px;
+            }
+
             table {
                 border: 1px solid black;
                 border-collapse: collapse;
@@ -26,7 +45,7 @@
             th {
                 border: 1px solid black;
                 border-collapse: collapse;
-                text-align: left;
+                text-align: center;
                 font-size: 20px;
                 padding: 10px;
                 background-color: #e7e7e7;
@@ -35,8 +54,8 @@
             td {
                 border: 1px solid black;
                 border-collapse: collapse;
-                text-align: left;
-                font-size:16px;
+                text-align: center;
+                font-size:18px;
                 padding: 10px;
             }
         </style>
@@ -45,7 +64,10 @@
     <body>
         <h1>Final Grades</h1>
 
-        <button onclick="location.href = 'home.html';">Go Back</button>
+        <div>
+            <button onclick="location.href = 'home.html';">Go Back</button>
+            <button onclick="location.href = 'logout.php';">Logout</button>
+        </div>
 
         <!-- table to display results -->
         <table>

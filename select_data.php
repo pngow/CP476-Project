@@ -35,6 +35,14 @@
         <title>Test</title>
         <!-- format different tags/aspects of the web page -->
         <style>
+            button {
+                margin-bottom: 25px;
+                width: 50%;
+                padding: 10px 24px;
+                text-align: center;
+                font-size:16px;
+            }
+
             table {
                 margin: auto;
                 width: 50%;
@@ -47,7 +55,9 @@
         <h1>Select Information</h1>
         
         <!-- NOTE: need to add logout button and format -->
-        <button onclick="location.href = 'select.php';">Go Back</button>
+        <div style="text-align: center">
+            <button onclick="location.href = 'select.php';">Go Back</button>
+        </div>
         <br><br>
 
         <?php

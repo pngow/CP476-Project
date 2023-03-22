@@ -18,6 +18,16 @@
         <title>Select</title>
         <!-- format different tags/aspects of the web page -->
         <style>
+            h1 {
+                text-align: center;
+            }
+
+            div {
+                width: 100%;
+                text-align: center;
+                display: inline-block;
+            }
+
             form {
                 width: 50%;
                 margin: auto;
@@ -40,7 +50,8 @@
             }
 
             button {
-                margin: 15px;
+                margin-bottom: 25px;
+                width: 20%;
                 padding: 10px 24px;
                 text-align: center;
                 font-size:16px;
@@ -52,9 +63,12 @@
                 text-align: center;
                 font-size:16px;
                 background-color: white;
+                border-width: 1px;
+                border-color: grey;
             }
             input[type=submit]:hover {
-                background-color: #e9fce9;
+                color: white;
+                background-color: black;
             }
         </style>
     </head>
@@ -63,8 +77,10 @@
         <h1>Select Information</h1>
 
         <!-- NOTE: add logout button & format -->
-        <button onclick="location.href = 'home.html';">Go Back</button><br>
-        <br>
+        <div>
+            <button onclick="location.href = 'home.html';">Go Back</button>
+            <button onclick="location.href = 'logout.php';">Logout</button>
+        </div>
         
         <!-- user enters student id, course id to view that student's information -->
         <form action="select_data.php" method="post">

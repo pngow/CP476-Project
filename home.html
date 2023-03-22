@@ -5,6 +5,10 @@
         <title>Navigation</title>
         <!-- format different tags/aspects of the web page -->
         <style>
+            h1 {
+                text-align:center;
+            }
+
             form {
                 text-align:center;
             }
@@ -14,16 +18,13 @@
                 margin: 15px;
                 padding: 10px 24px;
                 text-align: center;
-                font-size:14px;
+                font-size:16px;
             }
         </style>
     </head>
 
     <body>
         <h1>What would you like to do?</h1>
-
-        <!-- NOTE: still needs to be formatted and stuff -->
-        <button onclick="location.href = 'logout.php';">Logout</button>
 
         <!-- allow user to choose page to navigate to -->
         <form>
@@ -32,6 +33,8 @@
             <input type="button" onclick="location.href = 'update.php';" value="Update Student Information"><br>
             <br>
             <input type="button" onclick="location.href = 'calc_final_grade.php';" value="Get Total Grades"><br>
+            <br>
+            <input type="button" onclick="location.href = 'logout.php';" value="Logout">
         </form>
     </body>
 </html>
