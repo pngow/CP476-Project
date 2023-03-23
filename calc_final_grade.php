@@ -36,7 +36,7 @@
                 border: 1px solid black;
                 border-collapse: collapse;
                 width: 80%;
-                cellpadding: "10";
+                padding: "10";
                 table-layout: fixed;
                 margin-left: auto;
                 margin-right: auto;
