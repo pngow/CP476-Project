@@ -32,12 +32,12 @@
 <html>
     <head>
         <!-- name of tab -->
-        <title>Test</title>
+        <title>Student Info</title>
         <!-- format different tags/aspects of the web page -->
         <style>
             button {
                 margin-bottom: 25px;
-                width: 50%;
+                width: 20%;
                 padding: 10px 24px;
                 text-align: center;
                 font-size:16px;
@@ -57,6 +57,7 @@
         <!-- NOTE: need to add logout button and format -->
         <div style="text-align: center">
             <button onclick="location.href = 'select.php';">Go Back</button>
+            <button onclick="location.href = 'logout.php';">Logout</button>
         </div>
         <br><br>
 
@@ -74,6 +75,7 @@
                 $stmt->bindValue(':course_id', strtoupper($_POST['course_id']), PDO::PARAM_STR);
                 $stmt->execute();
                 // get results of query ... NOTE: assuming should only return one row
+                //NOTE: Do we need to create solution for multiple values returned?
                 // NOTE: checking if result returned nothing ... if so set to NULL
                 $result = $stmt -> rowCount() == 0 ? NULL : $stmt -> fetchAll(PDO::FETCH_ASSOC);
 
@@ -108,6 +110,7 @@
         </table>
             
         <?php
+        //error handling
             } catch(PDOException $e) {
                 echo "Error: " . $e->getMessage();
             }

@@ -2,7 +2,8 @@
     session_start();
 
     // use PDO to connect to database
-    // NOTE: should we also store thses in session variables?
+    // NOTE: should we also store thses in session variables? 
+    // ^ I dont think so as we will use a prepared laptop for demonstration?
     $host = "localhost";
     $database = "cp476";
     // get user inputted info
@@ -18,6 +19,7 @@
         header('Location: home.html');
 
         // set up database
+        // NOTE: This may duplicate values within tables?
         include("populate_db.php");
     } catch (PDOException $e) {
         echo "Connection failed: " . $e->getMessage();

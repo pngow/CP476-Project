@@ -5,7 +5,7 @@
     if(isset($_SESSION['status'])) {
         echo "<script>alert('Connection failed. Try again.');</script>";
 
-        // reset database username/password storage ... incorrect user info
+        // reset database username/password storage ... incorrect user info 
         unset($_SESSION['db_user']);
         unset($_SESSION['db_pass']);
         // reset session variable
@@ -76,6 +76,9 @@
 
     <body>
         <!-- NOTE: do we need to ask for host & database too? -->
+        <!-- ^ I dont think so as we will use a prepared laptop for demonstration? -->
+        <!-- Using "POST" send username and password to verify_credentials.php -->
+        <!-- initiate login proceedure -->
         <form action="verify_credentials.php" method="post">
             <label for="html">Username</label>
             <input type="text" id="db_user" name="db_user">

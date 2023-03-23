@@ -1,4 +1,5 @@
 <!-- NOTE: this one is not close to done lool -->
+<!-- NOTE: What is left? -->
 <!DOCTYPE html>
 <html>
     <head>

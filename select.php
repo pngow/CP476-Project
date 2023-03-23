@@ -76,7 +76,7 @@
     <body>
         <h1>Select Information</h1>
 
-        <!-- NOTE: add logout button & format -->
+        <!-- Buttons for "back" and "log-out" -->
         <div>
             <button onclick="location.href = 'home.html';">Go Back</button>
             <button onclick="location.href = 'logout.php';">Logout</button>
