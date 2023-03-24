@@ -90,6 +90,7 @@
                 // bind values to the parameters in the SQL statement
                 $stmt->bindValue(':student_id', $_POST['student_id'], PDO::PARAM_INT);
                 $stmt->bindValue(':course_id', strtoupper($_POST['course_id']), PDO::PARAM_STR);
+                //Run SQL query
                 $stmt->execute();
                 // get results of query ... NOTE: assuming should only return one row
                 //NOTE: Do we need handling for case where query returns >1?
