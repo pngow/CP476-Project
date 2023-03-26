@@ -10,7 +10,7 @@
         $_SESSION['status'] = "Student ID cannot be empty";
         // redirect page back to input form
         header('Location: select.php');
-    } elseif (!(is_numeric($_POST['student_id']) && strlen(strval($_POST['student_id'])))) {
+    } elseif (!(is_numeric($_POST['student_id']) && strlen(strval($_POST['student_id'])) == 9)) {
         // set session variable to be able to display error message on redirected page
         $_SESSION['status'] = "Student ID must be an integer with 9 characters";
         // redirect page back to input form

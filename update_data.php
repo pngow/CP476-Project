@@ -10,7 +10,7 @@
         $_SESSION['status'] = "Student ID cannot be empty";
         // redirect page back to input form
         header('Location: update.php');
-    } elseif (!(is_numeric($_POST['student_id']) && strlen(strval($_POST['student_id'])))) {
+    } elseif (!(is_numeric($_POST['student_id']) && strlen(strval($_POST['student_id'])) == 9)) {
         // set session variable to be able to display error message on redirected page
         $_SESSION['status'] = "Student ID must be an integer with 9 characters";
         // redirect page back to input form
@@ -25,8 +25,22 @@
         $_SESSION['status'] = "Course ID must consist of two letters followed by three numbers";
         // redirect page back to input form
         header('Location: update.php');
+    } elseif (empty($_POST['test_type'])) {
+        // set session variable to be able to display error message on redirected page
+        $_SESSION['status'] = "Must select a test to update the grade for";
+        // redirect page back to input form
+        header('Location: update.php');
+    } elseif (empty($_POST['updated_grade'])) {
+        // set session variable to be able to display error message on redirected page
+        $_SESSION['status'] = "New grade cannot be empty";
+        // redirect page back to input form
+        header('Location: update.php');
+    } elseif (!(is_numeric($_POST['updated_grade']))) {
+        // set session variable to be able to display error message on redirected page
+        $_SESSION['status'] = "New grade must be a number";
+        // redirect page back to input form
+        header('Location: update.php');
     }
-    //need more error checking
 ?>
 
 <!DOCTYPE html>

@@ -1,5 +1,16 @@
-<!-- NOTE: this one is not close to done lool -->
-<!-- NOTE: What is left? -->
+<?php
+    session_start();
+
+    // display error message if sent back (error in query execution or inputs given)
+    if(isset($_SESSION['status'])) {
+        $message = $_SESSION['status'];
+        echo "<script>alert('$message');</script>";
+
+        // reset session variable
+        unset($_SESSION['status']);
+    }
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
