@@ -30,7 +30,7 @@
         $_SESSION['status'] = "Must select a test to update the grade for";
         // redirect page back to input form
         header('Location: update.php');
-    } elseif (empty($_POST['updated_grade'])) {
+    } elseif (empty($_POST['updated_grade']) and $_POST['updated_grade'] !== '0') {
         // set session variable to be able to display error message on redirected page
         $_SESSION['status'] = "Updated grade cannot be empty";
         // redirect page back to input form
@@ -40,7 +40,7 @@
         $_SESSION['status'] = "Updated grade must be a number";
         // redirect page back to input form
         header('Location: update.php');
-    } elseif (settype($_POST['updated_grade'], "integer") >= 0 and settype($_POST['updated_grade'], "integer") <= 100) {
+    } elseif ((float)$_POST['updated_grade'] < 0 or (float)$_POST['updated_grade'] > 100) {
         // set session variable to be able to display error message on redirected page
         $_SESSION['status'] = "Updated grade must be between 0 and 100";
         // redirect page back to input form
