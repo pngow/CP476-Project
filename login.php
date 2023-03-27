@@ -71,10 +71,14 @@
                 color: white;
                 background-color: black;
             }
+            h1 {
+                text-align: center;
+            }
         </style>
     </head>
 
     <body>
+        <h1>Student Academic Records</h1>
         <!-- NOTE: do we need to ask for host & database too? -->
         <!-- ^ I dont think so as we will use a prepared laptop for demonstration? -->
         <!-- Using "POST" send username and password to verify_credentials.php -->
