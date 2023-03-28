@@ -52,7 +52,7 @@
     </head>
 
     <body>
-        <h1>Select Information</h1>
+        <h1 style="text-align: center">Selected Information</h1>
         
         <!-- NOTE: need to add logout button and format -->
         <div style="text-align: center">
